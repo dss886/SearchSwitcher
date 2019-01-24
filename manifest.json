@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+    "name": "SearchSwitcher",
+    "version": "1.0.0",
+    "description": "Use shortcut to switch between search engines like Google and Baidu",
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "page_action": {
+        "default_icon": "img/icon48.png",
+        "default_title": "SearchSwitcher"
+    },
+    "commands": {
+        "switch": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+S",
+                "mac": "MacCtrl+S"
+            },
+            "description": "切换搜索引擎"
+        }
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://www.baidu.com/*", 
+            "https://www.google.com.hk/*"
+        ],
+        "js": ["inject.js"]
+    }],
+    "permissions": [
+        "tabs",
+        "https://www.baidu.com/*",
+        "https://www.google.com.hk/*"
+    ],
+    "homepage_url": "https://www.dss886.com"
+}
