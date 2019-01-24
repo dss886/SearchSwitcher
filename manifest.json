@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "SearchSwitcher",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Use shortcut to switch between search engines like Google and Baidu",
     "icons": {
         "16": "img/icon16.png",
@@ -36,5 +36,5 @@
         "https://www.baidu.com/*",
         "https://www.google.com.hk/*"
     ],
-    "homepage_url": "https://www.dss886.com"
+    "homepage_url": "https://github.com/dss886/SearchSwitcher"
 }
